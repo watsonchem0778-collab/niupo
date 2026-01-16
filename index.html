@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日月昭华 | 明代线上文化展览馆</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="video-modal-overlay" id="video-modal">
+        <div class="video-modal-content">
+            <div class="close-video-btn" id="close-video">×</div>
+            <video controls id="modal-video-player">
+                <source src="" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </div>
+
+    <div class="header-wrapper">
+        <div class="top-bar">
+            <div class="top-bar-links">
+                <a href="#">参观指南</a>
+                <a href="#">文创雅集</a>
+                <a href="#">数字典籍</a>
+                <a href="#">EN</a>
+            </div>
+        </div>
+        <header>
+            <div class="brand">
+                <img src="images/logo1.png" class="brand-logo" alt="Logo" id="nav-logo">
+                <div class="brand-text">
+                    <div class="brand-title">日月昭华</div>
+                    <div class="brand-sub">明代线上文化展览馆</div>
+                </div>
+            </div>
+            <nav class="nav-container" id="main-nav">
+                <ul class="nav-items">
+                    <div class="nav-indicator"></div> 
+                    <li><a href="#" class="nav-link active">首页</a></li>
+                    <li><a href="#" class="nav-link">馆藏概况</a></li>
+                    <li><a href="#" class="nav-link">书画雅集</a></li>
+                    <li><a href="#" class="nav-link">宫廷器物</a></li>
+                    <li><a href="#" class="nav-link">服饰礼仪</a></li>
+                    <li><a href="#" class="nav-link">学术研究</a></li>
+                    <li><a href="#" class="nav-link">百年馆庆</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="action-btn" id="search-trigger">
+                    <svg class="search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </div>
+                <div class="menu-btn" id="menu-trigger">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="full-menu-overlay" id="full-menu">
+        <div class="menu-header"><div class="close-menu-btn" id="close-menu">×</div></div>
+        <div class="menu-content">
+            <div class="menu-col"><h3>馆藏概况</h3><ul><li><a href="#">陶瓷馆</a></li><li><a href="#">书画馆</a></li><li><a href="#">金银器馆</a></li><li><a href="#">玉器馆</a></li></ul></div>
+            <div class="menu-col"><h3>明代资讯</h3><ul><li><a href="#">最新展览</a></li><li><a href="#">学术讲座</a></li><li><a href="#">社会教育</a></li><li><a href="#">志愿者招募</a></li></ul></div>
+            <div class="menu-col"><h3>学术研究</h3><ul><li><a href="#">明史研究</a></li><li><a href="#">文物保护</a></li><li><a href="#">出版物</a></li><li><a href="#">数字人文</a></li></ul></div>
+            <div class="menu-col"><h3>参观服务</h3><ul><li><a href="#">交通指南</a></li><li><a href="#">开放时间</a></li><li><a href="#">票务预约</a></li><li><a href="#">讲解服务</a></li></ul></div>
+            <div class="menu-col"><h3>关于我们</h3><ul><li><a href="#">建馆历史</a></li><li><a href="#">组织架构</a></li><li><a href="#">联系方式</a></li><li><a href="#">捐赠鸣谢</a></li></ul></div>
+        </div>
+        <div class="menu-decor">大明风华</div>
+    </div>
+    <div class="search-modal" id="search-modal">
+        <div class="close-search" id="close-search">×</div>
+        <div class="search-box"><input type="text" class="search-input" placeholder="请输入关键词，如：永乐大典、青花瓷..."></div>
+    </div>
+
+    <section class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="slide-bg" style="background-image: url('images/baiguan_img.png');"></div>
+                <div class="hero-topic-box">
+                    <h2 class="topic-title">大明官制</h2>
+                    <p class="topic-desc">九品十八阶，衣冠禽兽，皆为国之栋梁。<br>探索明代文官武将的晋升之路与朝堂生态。</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('images/gugongwumen.png');"></div>
+                <div class="hero-topic-box">
+                    <h2 class="topic-title">大明建筑</h2>
+                    <p class="topic-desc">天子之都，紫禁城垣，榫卯之间见乾坤。<br>领略明代皇家宫殿与礼制建筑的营造技艺。</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('images/big_ming_girls_no1.png');"></div>
+                <div class="hero-topic-box">
+                    <h2 class="topic-title">大明少女图鉴</h2>
+                    <p class="topic-desc">罗衣何飘飘，轻裾随风还。<br>从仕女画中窥见明代女性的服饰风尚与生活美学。</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-progress">
+            <div class="progress-text"><span class="current-num" id="current-num">01</span><span class="separator">/</span><span class="total-num" id="total-num">03</span></div>
+            <div class="progress-line-container"><div class="progress-line-fill" id="progress-fill"></div></div>
+        </div>
+        <div class="scroll-hint">﹀</div>
+    </section>
+
+    <section class="ming-news-section" id="systems">
+        <div class="mn-container">
+            <header class="mn-header">
+                <div class="mn-title-group">
+                    <h2 class="mn-main-title">
+                        典制旧章
+                        <div class="mn-seal">大明会典</div>
+                    </h2>
+                    <span class="mn-sub-title">大明国家制度与运作体系</span>
+                </div>
+                <a href="index2.html" class="mn-view-more">查阅《大明会典》</a>
+            </header>
+
+            <div class="mn-content-wrapper">
+                <div class="mn-featured-box">
+                    <img src="" alt="Feature Image" class="mn-featured-img" id="mn-main-img">
+                </div>
+                <div class="mn-text-box">
+                    <div id="mn-text-content">
+                        <span class="mn-item-source" id="mn-main-source">文献来源加载中...</span>
+                        <h3 class="mn-item-title" id="mn-main-title">标题加载中...</h3>
+                        <p class="mn-item-desc" id="mn-main-desc">内容描述加载中...</p>
+                    </div>
+                    
+                    <div class="mn-controls-row">
+                        <div class="mn-arrows">
+                            <div class="mn-arrow-btn" id="mn-prev-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </div>
+                            <div class="mn-arrow-btn" id="mn-next-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </div>
+                        <div class="mn-indicator">
+                            <span class="mn-curr-num" id="mn-curr-num">1</span><span class="mn-total-num" id="mn-total-num">/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mn-sub-list" id="mn-sub-list">
+                </div>
+        </div>
+    </section>
+
+    <div class="section-separator-simple"></div>
+
+    <section class="humanities-section" id="humanities">
+        <div class="hum-header-box">
+            <header class="hum-header">
+                <div class="hum-title-group">
+                    <h2 class="hum-main-title">
+                        人文风物
+                        <div class="hum-seal">民间烟火</div>
+                    </h2>
+                    <span class="hum-sub-title">大明社会生活与民俗文化</span>
+                </div>
+            </header>
+            <p class="hum-intro-modern">
+                百姓日用即道，饮食男女皆春。大明三百载，风俗移易，而人情未远。
+            </p>
+        </div>
+        <div class="hum-grid-container">
+            
+            <a href="food.html" class="hum-card-large ink-style">
+                <div class="hum-card-text">
+                    <h3 class="hum-card-title">衣冠饮食</h3>
+                    <p class="hum-card-desc">上承汉唐之礼，下启市井之风。从“十二幅裙”的流变到“南甜北咸”的雏形，见证物质生活的极度雅化。</p>
+                    <span class="hum-tag">日用之美</span>
+                </div>
+                <div class="hum-card-img-wrap"><div class="hum-card-img" style="background-image: url('images/shaonv.png');"></div></div>
+            </a>
+            
+            <div class="hum-card-large ink-style">
+                <div class="hum-card-text">
+                    <h3 class="hum-card-title">居住与城市</h3>
+                    <p class="hum-card-desc">园林虽小乾坤大，市井虽喧烟火浓。探索明代江南市镇的崛起与文人园林的造园美学。</p>
+                    <span class="hum-tag">安身之处</span>
+                </div>
+                <div class="hum-card-img-wrap"><div class="hum-card-img" style="background-image: url('images/ditu.png');"></div></div>
+            </div>
+            <div class="hum-card-small paper-style">
+                <div class="hum-small-img" style="background-image: url('images/baixing.png');"></div>
+                <div class="hum-small-content"><h4 class="hum-small-title">士人与百姓</h4><p class="hum-small-desc">读书声里是家国，耕织图中见太平。士绅阶层的精神世界与黎民百姓的生计劳作。</p></div>
+            </div>
+            <div class="hum-card-small paper-style">
+                <div class="hum-small-img" style="background-image: url('images/jisi.png');"></div>
+                <div class="hum-small-content"><h4 class="hum-small-title">礼俗与人生</h4><p class="hum-small-desc">四时八节，婚丧嫁娶。在繁琐而庄重的仪式中，确立人与家族、人与天地的秩序。</p></div>
+            </div>
+            <div class="hum-card-small paper-style">
+                <div class="hum-small-img" style="background-image: url('images/qinmingheshangtu.png');"></div>
+                <div class="hum-small-content"><h4 class="hum-small-title">地域风物</h4><p class="hum-small-desc">十里不同风，百里不同俗。展现大明疆域内从北国风雪到江南烟雨的多元生活形态。</p></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator-simple"></div>
+
+    <section class="relics-section-sysu" id="relics">
+        <div class="soc-grid-container">
+            
+            <div class="soc-info-block">
+                <div class="soc-header-group">
+                    <h2 class="soc-main-title">文物图志</h2>
+                    <a href="for.html" class="soc-view-more">
+                        查看更多 
+                        <span class="soc-arrow-icon">
+                            <svg viewBox="0 0 1024 1024" width="12" height="12"><path d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512 340.864 831.872a30.592 30.592 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0l334.336-341.312a29.952 29.952 0 0 0 0-42.752L382.592 149.376a29.12 29.12 0 0 0-41.728-0.064z" fill="currentColor"></path></svg>
+                        </span>
+                    </a>
+                </div>
+                
+                <p class="soc-intro-text">
+                    夫史之所载，文以记言，物以存真。皇明文物，典章灿然。自内阁大库之档案，至职方司之舆图；从宫廷礼器之精备，到城垣营造之规制。兹录实物遗存与图籍文献，互证互考，以窥一代制度之实相。
+                </p>
+            </div>
+
+            <div class="soc-card soc-card-lg video-container" id="main-video-trigger">
+                 <video autoplay loop muted playsinline>
+                     <source src="videos/guangfugushi.mp4" type="video/mp4">
+                     您的浏览器不支持视频播放。
+                 </video>
+                <div class="soc-card-overlay">
+                    <h3 class="soc-card-title">舆图与空间：披图按籍，知其厄塞</h3>
+                    <div class="soc-meta-row">
+                        <span class="soc-source"><span class="soc-dot bg-theme-red"></span> 皇明一统舆图</span>
+                        <span class="soc-date">疆域版图动态展示</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="soc-card soc-card-sm" style="background-image: url('images/huangce.png');">
+                <div class="soc-card-overlay">
+                    <h3 class="soc-card-title">文书档案：诏敕与黄册</h3>
+                    <div class="soc-meta-row">
+                        <span class="soc-source"><span class="soc-dot bg-theme-red"></span> 官方文献</span>
+                        <span class="soc-date">国之喉舌</span>
+                    </div>
+                    <p class="soc-hover-desc">
+                        皇明诏敕，笔削春秋。黄册如山，记载万民生息与赋役之源。从浩繁卷帙中，窥见大明帝国运行的制度肌理。
+                    </p>
+                </div>
+            </div>
+
+            <div class="soc-card soc-card-sm" style="background-image: url('images/conghuagong.png');">
+                <div class="soc-card-overlay">
+                    <h3 class="soc-card-title">器物与建筑：宫阙城垣</h3>
+                    <div class="soc-meta-row">
+                        <span class="soc-source"><span class="soc-dot bg-theme-red"></span> 营造法式</span>
+                        <span class="soc-date">中轴对称</span>
+                    </div>
+                    <p class="soc-hover-desc">
+                        朱墙黄瓦，雕梁画栋。宫廷御用之器，尽显天家富贵与工匠巧思。中轴对称的城垣布局，彰显皇权至上的威仪。
+                    </p>
+                </div>
+            </div>
+
+            <div class="soc-card soc-card-sm" style="background-image: url('images/wenwu.png');">
+                <div class="soc-card-overlay">
+                    <h3 class="soc-card-title">礼乐祭器：郊庙之制</h3>
+                    <div class="soc-meta-row">
+                        <span class="soc-source"><span class="soc-dot bg-theme-red"></span> 礼器</span>
+                        <span class="soc-date">辨等明分</span>
+                    </div>
+                    <p class="soc-hover-desc">
+                        钟鼓喤喤，磬管将将。郊庙祭祀之礼器，承载敬天法祖之诚心。礼乐制度的完备，是王朝正统与教化万民的基石。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info-left">
+                <h4>参观服务</h4>
+                <p>开放时间：周二至周日 09:00 - 17:00（16:00停止入馆）</p>
+                <p>场馆地址：大明京师 · 顺天府 · 崇文门大街</p>
+                <p>咨询电话：(86) 10-8888-8888</p>
+                <p>电子邮箱：contact@mingdynasty.com</p>
+            </div>
+
+            <div class="footer-logo-box">
+                <div class="footer-brand">
+                    <img src="images/logo1.png" alt="Logo" class="footer-logo-img">
+                    <div class="footer-brand-text">
+                        <div class="footer-brand-title">日月昭华</div>
+                        <div class="footer-brand-sub">明代线上文化展览馆</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links-right">
+                <h4>关注我们</h4>
+                <div class="footer-social-icons">
+                    <div class="social-icon" title="微信">
+                        <img src="images/weixin.png" alt="微信">
+                        <div class="qr-popup">
+                            <img src="images/erweima.png" alt="二维码">
+                        </div>
+                    </div>
+                    <div class="social-icon" title="微博">
+                        <img src="images/weibo.png" alt="微博">
+                        <div class="qr-popup">
+                            <img src="images/erweima.png" alt="二维码">
+                        </div>
+                    </div>
+                    <div class="social-icon" title="Bilibili">
+                        <img src="images/bilibili.png" alt="Bilibili">
+                        <div class="qr-popup">
+                            <img src="images/erweima.png" alt="二维码">
+                        </div>
+                    </div>
+                    <div class="social-icon" title="更多链接">
+                        <img src="images/xiaochengxu.png" alt="更多链接">
+                        <div class="qr-popup">
+                            <img src="images/erweima.png" alt="二维码">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+    <p>
+        COPYRIGHT © 2026 CLOUD VIEW QIN HONG HAO ALL RIGHTS RESERVED | 
+        <span 
+            onmouseover="this.innerText='技术支持：[礼部仪制司主事|覃昭雪]'" 
+            onmouseout="this.innerText='技术支持：大明礼部仪制司'" 
+            style="cursor: pointer; transition: color 0.1s;"
+            title="点击查看开发者"
+        >
+            技术支持：大明礼部仪制司
+        </span>
+    </p>
+</div>
+        <div class="back-to-top" id="backToTopBtn" title="返回顶部">↑</div>
+    </footer>
+
+    <script>
+        // 导航与滚动交互逻辑
+        const indicator = document.querySelector('.nav-indicator');
+        const navLinks = document.querySelectorAll('.nav-link');
+        let activeLink = document.querySelector('.nav-link.active');
+        const headerWrapper = document.querySelector('.header-wrapper');
+        const navLogo = document.getElementById('nav-logo');
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        const scrollHintBtn = document.querySelector('.scroll-hint'); 
+
+        function moveIndicator(el) { if(!el) return; indicator.style.width = `${el.offsetWidth}px`; indicator.style.left = `${el.offsetLeft}px`; }
+        if(activeLink) moveIndicator(activeLink);
+        navLinks.forEach(link => link.addEventListener('mouseenter', (e) => moveIndicator(e.target)));
+        document.querySelector('.nav-container').addEventListener('mouseleave', () => { if(activeLink) moveIndicator(activeLink); });
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const triggerHeight = 700;
+            
+            if (scrollY > triggerHeight) {
+                headerWrapper.classList.add('scrolled');
+                navLogo.src = "images/logo2.png"; 
+            } else {
+                headerWrapper.classList.remove('scrolled');
+                navLogo.src = "images/logo1.png"; 
+            }
+
+            if (scrollY > 300) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            smoothScrollToTop(400); 
+        });
+
+        if(scrollHintBtn) {
+            scrollHintBtn.addEventListener('click', () => {
+                 const systemsSection = document.getElementById('systems');
+                 if(systemsSection) {
+                     systemsSection.scrollIntoView({ behavior: 'smooth' });
+                 }
+            });
+        }
+
+        function smoothScrollToTop(duration) {
+            const startPosition = window.pageYOffset;
+            const startTime = performance.now();
+            function scrollAnimation(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                window.scrollTo(0, startPosition * (1 - easeInOutQuad(progress)));
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(scrollAnimation);
+                }
+            }
+            requestAnimationFrame(scrollAnimation);
+        }
+
+        const slides = document.querySelectorAll('.carousel-slide');
+        let heroIndex = 0;
+        const totalHeroSlides = slides.length;
+        if(document.getElementById('total-num')) {
+            document.getElementById('total-num').textContent = `0${totalHeroSlides}`;
+        }
+        function updateHero() {
+            if(!slides.length) return;
+            slides.forEach(s => s.classList.remove('active'));
+            slides[heroIndex].classList.add('active');
+            const currNum = document.getElementById('current-num');
+            const progressFill = document.getElementById('progress-fill');
+            if(currNum) currNum.textContent = `0${heroIndex + 1}`;
+            if(progressFill) progressFill.style.width = `${((heroIndex + 1)/totalHeroSlides)*100}%`;
+            heroIndex = (heroIndex + 1) % totalHeroSlides;
+        }
+        setInterval(updateHero, 5000); updateHero();
+
+        document.getElementById('menu-trigger').addEventListener('click', () => document.getElementById('full-menu').classList.add('active'));
+        document.getElementById('close-menu').addEventListener('click', () => document.getElementById('full-menu').classList.remove('active'));
+        document.getElementById('search-trigger').addEventListener('click', () => document.getElementById('search-modal').classList.add('active'));
+        document.getElementById('close-search').addEventListener('click', () => document.getElementById('search-modal').classList.remove('active'));
+
+        const systemsData = [
+            {
+                id: 1,
+                source: "《大明会典》卷之二 · 吏部",
+                title: "中央中枢：内阁与六部体制的确立",
+                desc: "洪武十三年废丞相，权分六部，直达天听。后设内阁参与机务，票拟谕旨。至仁宣之治，内阁权日重，形成“内阁-六部”双轨制的中央行政中枢，奠定了明清两代五百年的政治基石。此体制既加强了皇权，又保持了行政体系的高效运转。",
+                img: "images/jingtaichuige.jpg" 
+            },
+            {
+                id: 2,
+                source: "《大明律》· 名例律",
+                title: "法度森严：刑乱国用重典",
+                desc: "大明立国初年，太祖鉴于元末法纪废弛，强调“明刑弼教”，制定《大明律》与《大诰》。其法典体例严谨，用刑偏重，旨在整饬吏治、教化臣民。律文之后附有条例，展现了法律随时代变迁的灵活性。",
+                img: "images/daminghuidian.png" 
+            },
+            {
+                id: 3,
+                source: "《大学衍义补》· 贡举之法",
+                title: "科举抡才：八股取士与文官政治",
+                desc: "明代科举臻于完备，设乡试、会试、殿试三级。定八股文体，专取四书五经义理，代圣立言。虽桎梏思想，却也为帝国选拔了大量出身寒微的治世能臣，打通了社会阶层流动的渠道，确立了士大夫共治天下的文官政治格局。",
+                img: "images/taisuidian.png" 
+            },
+            {
+                id: 4,
+                source: "官员任用与考核制度",
+                title: "地方治理：三司分权与督抚巡按",
+                desc: "在省级行政区设立承宣布政使司（民政）、提刑按察使司（监察司法）、都指挥使司（军事），三司互不统属，分别向中央负责。中后期为提高效率，常设总督、巡抚以节制三司，又派监察御史巡按地方，形成多层次、相制衡的地方治理体系。",
+                img: "images/guanbangtu.jpg" 
+            },
+            {
+                id: 5,
+                source: "《明史》卷七十七 · 食货一",
+                title: "军制赋役：卫所屯田与一条鞭法",
+                desc: "寓兵于农，国富兵强。大明立国之基，在于卫所屯田以养百万之师。至万历年间，张居正推行“一条鞭法”，将田赋、徭役等杂税合并，折银征收。此举简化了税制，充实了国库，推动了白银货币化与商品经济的繁荣。",
+                img: "images/chujingtu.jpg"
+            }
+        ];
+
+        let mnCurrentIndex = 0; 
+        const mnMainImg = document.getElementById('mn-main-img');
+        const mnTextContent = document.getElementById('mn-text-content');
+        const mnMainSource = document.getElementById('mn-main-source');
+        const mnMainTitle = document.getElementById('mn-main-title');
+        const mnMainDesc = document.getElementById('mn-main-desc');
+        const mnCurrNum = document.getElementById('mn-curr-num');
+        const mnTotalNum = document.getElementById('mn-total-num');
+        const mnSubList = document.getElementById('mn-sub-list');
+        const mnPrevBtn = document.getElementById('mn-prev-btn');
+        const mnNextBtn = document.getElementById('mn-next-btn');
+
+        function updateMnContent(index) {
+            const data = systemsData[index];
+            if(mnMainImg) {
+                mnMainImg.classList.remove('fade-in-active');
+                void mnMainImg.offsetWidth;
+                mnMainImg.src = data.img;
+                mnMainImg.classList.add('fade-in-active');
+            }
+            if(mnTextContent) {
+                mnTextContent.classList.remove('fade-in-active');
+                if(mnMainSource) mnMainSource.textContent = data.source;
+                if(mnMainTitle) mnMainTitle.textContent = data.title;
+                if(mnMainDesc) mnMainDesc.textContent = data.desc;
+                mnTextContent.classList.add('fade-in-active');
+            }
+            if(mnCurrNum) mnCurrNum.textContent = index + 1;
+            renderMnSubList(index);
+        }
+
+        function renderMnSubList(activeIndex) {
+            if(!mnSubList) return;
+            mnSubList.innerHTML = ''; 
+            for (let i = 0; i < systemsData.length; i++) {
+                let item = systemsData[i];
+                const card = document.createElement('div');
+                if (i === activeIndex) {
+                    card.className = 'mn-sub-card active';
+                } else {
+                    card.className = 'mn-sub-card';
+                }
+                card.innerHTML = `
+                    <div class="mn-sub-img-wrap"><img src="${item.img}" class="mn-sub-img"></div>
+                    <div class="mn-sub-info">
+                        <span class="mn-sub-source">${item.source}</span>
+                        <h4 class="mn-sub-title">${item.title}</h4>
+                    </div>
+                `;
+                card.addEventListener('click', () => {
+                    mnCurrentIndex = i;
+                    updateMnContent(mnCurrentIndex);
+                });
+                mnSubList.appendChild(card);
+            }
+        }
+
+        if(mnNextBtn) mnNextBtn.addEventListener('click', () => {
+            mnCurrentIndex = (mnCurrentIndex + 1) % systemsData.length;
+            updateMnContent(mnCurrentIndex);
+        });
+
+        if(mnPrevBtn) mnPrevBtn.addEventListener('click', () => {
+            mnCurrentIndex = (mnCurrentIndex - 1 + systemsData.length) % systemsData.length;
+            updateMnContent(mnCurrentIndex);
+        });
+
+        if(mnTotalNum) mnTotalNum.textContent = `/${systemsData.length}`;
+        updateMnContent(0);
+        
+        const mainVideoTrigger = document.getElementById('main-video-trigger');
+        const videoModal = document.getElementById('video-modal');
+        const closeVideoBtn = document.getElementById('close-video');
+        const modalVideoPlayer = document.getElementById('modal-video-player');
+        
+        const videoSourceUrl = "videos/guangfugushi.mp4";
+
+        if(mainVideoTrigger) {
+            mainVideoTrigger.addEventListener('click', () => {
+                videoModal.classList.add('active');
+                modalVideoPlayer.src = videoSourceUrl;
+                modalVideoPlayer.play();
+            });
+        }
+
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            modalVideoPlayer.pause();
+            modalVideoPlayer.currentTime = 0;
+        }
+
+        if(closeVideoBtn) closeVideoBtn.addEventListener('click', closeVideoModal);
+        
+        if(videoModal) {
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    closeVideoModal();
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
